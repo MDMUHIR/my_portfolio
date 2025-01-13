@@ -3,7 +3,7 @@
     <Background />
 
     <div
-      class="flex flex-col xl:flex-row md:container mt-10 xl:mt-16 mb-16  mx-auto md:px-4 space-y-8 xl:space-y-0 xl:space-x-8"
+      class="flex flex-col xl:flex-row items-center xl:items-stretch md:container mt-10 xl:mt-16 mb-16  mx-auto md:px-4 space-y-8 xl:space-y-0 xl:space-x-8"
     >
       <!-- Navigation bar -->
 
