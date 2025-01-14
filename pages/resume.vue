@@ -81,7 +81,7 @@ const experiences = reactive([
     </div>
     <!-- education -->
     <!-- _______________________________ -->
-    <div class="relative">
+    <div class="relative mt-5">
       <!-- Heading -->
       <div class="Heading flex items-center">
         <div

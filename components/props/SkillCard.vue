@@ -17,7 +17,7 @@ const props = defineProps({
 
 <template>
   <div
-    class="main min-w-[20rem] bg-[#151419] border border-[#666565] shadow-[#6b5f5f] shadow-lg rounded-2xl relative overflow-hidden"
+    class="main min-w-[20rem] bg-[#151419] border border-[#666565] shadow-[#6b5f5f] rounded-2xl relative overflow-hidden"
   >
     <div class="content relative z-30">
       <!-- Heading -->
@@ -26,7 +26,6 @@ const props = defineProps({
           <h1
             class="text-xl lg:text-2xl font-medium text-[#FFFFFF] px-2 py-1 tracking-wide"
           >
-
             {{ props.heading }}
           </h1>
         </slot>
@@ -38,10 +37,10 @@ const props = defineProps({
         <div v-for="(skill, index) in props.items" :key="index" class="z-20">
           <a
             :href="skill.link"
-            class="px-5 flex flex-col md:flex-row items-center justify-center  py-2"
+            class="px-5 flex flex-col md:flex-row items-center justify-center py-2"
           >
             <img :src="skill.icon" alt="" class="w-8 sm:w-10 max-h-12" />
-            
+
             <p
               class="px-1 m-1 rounded-full from-rose-400 via-fuchsia-500 to-indigo-500 bg-gradient-to-r"
             >
