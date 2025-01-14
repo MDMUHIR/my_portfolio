@@ -4,9 +4,9 @@ const showDiv = ref(false);
 
 <template>
   <div class="main relative">
-    <Navbar
+    <!-- <Navbar
         class="absolute -bottom-[5rem] -left-5 -right-5 z-50 hidden xl:block"
-      />
+      /> -->
     <div
       class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 opacity-75 blur z-10"
     ></div>
@@ -22,7 +22,7 @@ const showDiv = ref(false);
           alt=""
           class="w-[6rem] md:w-[12rem] rounded-[20%] shadow-inner"
         />
-        <div class="Title ml-3 md:ml-6 xl:ml-0">
+        <div class="Title ml-3 mr-1 md:ml-6 xl:ml-0">
           <h1
             class="text-[22px] sm:text-2xl md:text-4xl xl:text-3xl font-medium text-white my-2"
           >
@@ -30,7 +30,7 @@ const showDiv = ref(false);
           </h1>
 
           <p
-            class="p-[1px] rounded-md from-rose-400 via-fuchsia-500 to-indigo-500 bg-gradient-to-r"
+            class="p-[1px] md:m-1 rounded-md from-rose-400 via-fuchsia-500 to-indigo-500 bg-gradient-to-r"
           >
             <span
               class="block text-white text-center font-semibold bg-[#2B2B2C] rounded-md"
@@ -39,10 +39,7 @@ const showDiv = ref(false);
           </p>
         </div>
       </div>
-      <div
-        class="bottom  py-2 xl:block"
-        :class="showDiv ? 'block ' : 'hidden'"
-      >
+      <div class="bottom py-2 xl:block" :class="showDiv ? 'block ' : 'hidden'">
         <div class="Contact">
           <!-- Conatact  -->
           <Contact />

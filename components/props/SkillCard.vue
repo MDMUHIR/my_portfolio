@@ -38,7 +38,7 @@ const props = defineProps({
         <div v-for="(skill, index) in props.items" :key="index" class="z-20">
           <a
             :href="skill.link"
-            class="px-5 flex flex-col md:flex-row items-center justify-center btn10 py-2"
+            class="px-5 flex flex-col md:flex-row items-center justify-center  py-2"
           >
             <img :src="skill.icon" alt="" class="w-8 sm:w-10 max-h-12" />
             
