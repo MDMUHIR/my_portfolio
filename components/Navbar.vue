@@ -1,22 +1,22 @@
 <script setup>
-const route = useRoute();
+  const route = useRoute();
 </script>
 
 <template>
-  <nav class="main flex justify-center items-center">
+  <nav class="main flex justify-center items-center w-full">
     <nav
-      class="rounded-full bg-gradient-to-br from-neutral-500 to-[#642828] xl:w-[35rem] p-0.5"
+      class="rounded-full bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[35rem] p-0.5 shadow-lg shadow-black/30 backdrop-blur-md"
     >
       <div
-        class="list px-2 md:px-12 py-1 md:py-2 backdrop-blur-mds flex justify-center items-center space-x-4 xl:space-x-10 bg-sla te-800 rounded-full relative overflow-hidden bg-gray-900/90 backdrop-blur-md"
+        class="list px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12 py-1.5 sm:py-2 md:py-2.5 flex justify-center items-center space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6 xl:space-x-10 rounded-full relative overflow-hidden bg-neutral-950/50 backdrop-blur-md border border-white/10 transition-all duration-300 hover:border-white/20 hover:bg-neutral-950/60"
       >
-        <nuxt-link to="/">
+        <nuxt-link to="/" class="group">
           <p
-            class="px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10"
+            class="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 sm:gap-2 md:gap-2.5 hover:bg-white/10 hover:scale-105"
             :class="
               route.path === '/'
-                ? 'bg-white/50 text-white  font-semibold'
-                : 'text-stone-100'
+                ? 'bg-gradient-to-r from-neutral-800 to-neutral-900 text-white font-semibold shadow-inner shadow-black/20'
+                : 'text-neutral-200 hover:text-white'
             "
           >
             <svg
@@ -24,84 +24,104 @@ const route = useRoute();
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 576 512"
-              class="text-base scale-110"
+              class="text-sm sm:text-base scale-110 transition-transform duration-300 group-hover:scale-110"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"
-              ></path></svg
-            ><span class="hidden md:inline">Home</span>
-          </p></nuxt-link
-        >
-        <nuxt-link to="/resume">
-          <p
-            class="px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10"
-            :class="
-              route.path === '/resume'
-                ? 'bg-white/50 text-white  font-semibold'
-                : 'text-gray-100'
-            "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="text-base scale-110"
-              height="1em"
-              width="1em"
-              viewBox="0 0 256 256"
-              stroke="currentColor"
-              fill="currentColor"
-            >
-              <path
-                d="m210.78 39.25l-130.25-23A16 16 0 0 0 62 29.23l-29.75 169a16 16 0 0 0 13 18.53l130.25 23a16 16 0 0 0 18.54-13l29.75-169a16 16 0 0 0-13.01-18.51m-75.28 92.31a8 8 0 0 1-7.87 6.61a8.3 8.3 0 0 1-1.4-.12l-41.5-7.33A8 8 0 0 1 87.52 115l41.48 7.29a8 8 0 0 1 6.5 9.27m47-24.18a8 8 0 0 1-7.86 6.61a7.6 7.6 0 0 1-1.41-.13l-83-14.65a8 8 0 0 1 2.79-15.76l83 14.66a8 8 0 0 1 6.51 9.27Zm5.55-31.52a8 8 0 0 1-7.87 6.61a8.4 8.4 0 0 1-1.4-.12l-83-14.66a8 8 0 1 1 2.78-15.75l83 14.65a8 8 0 0 1 6.52 9.27Z"
-              />
+                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+              ></path>
             </svg>
-
-            <span class="hidden md:inline">Resume</span>
-          </p></nuxt-link
-        >
-        <nuxt-link to="/portfolio">
+            <span class="hidden sm:inline">Home</span>
+          </p>
+        </nuxt-link>
+        <nuxt-link to="/portfolio" class="group">
           <p
-            class="px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10"
+            class="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 sm:gap-2 md:gap-2.5 hover:bg-white/10 hover:scale-105"
             :class="
               route.path === '/portfolio'
-                ? 'bg-white/50 text-white  font-semibold'
-                : 'text-gray-100'
+                ? 'bg-gradient-to-r from-neutral-800 to-neutral-900 text-white font-semibold shadow-inner shadow-black/20'
+                : 'text-neutral-200 hover:text-white'
             "
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="text-base scale-110"
-              height="1em"
-              width="1em"
-              viewBox="0 0 20 20"
               stroke="currentColor"
               fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="text-sm sm:text-base scale-110 transition-transform duration-300 group-hover:scale-110"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9zm3-8V2H8v1z"
-              />
+                d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V5h16l.002 14H4z"
+              ></path>
             </svg>
-
-            <span class="hidden md:inline">Portfolio</span>
-          </p></nuxt-link
-        >
-        <!-- <nuxt-link to="/contact">
+            <span class="hidden sm:inline">Portfolio</span>
+          </p>
+        </nuxt-link>
+        <nuxt-link to="/resume" class="group">
           <p
-            class=""
+            class="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 sm:gap-2 md:gap-2.5 hover:bg-white/10 hover:scale-105"
             :class="
-              route.path === '/contact'
-                ? 'text-[#350023]  bg-white/50 px-2 pt-0.5  rounded-full  shadow-inner shadow-black scale-110 border p'
-                : 'text-gray-100 '
+              route.path === '/resume'
+                ? 'bg-gradient-to-r from-neutral-800 to-neutral-900 text-white font-semibold shadow-inner shadow-black/20'
+                : 'text-neutral-200 hover:text-white'
             "
           >
-            Contact
-          </p></nuxt-link
-        > -->
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              class="text-sm sm:text-base scale-110 transition-transform duration-300 group-hover:scale-110"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"
+              ></path>
+            </svg>
+            <span class="hidden sm:inline">Resume</span>
+          </p>
+        </nuxt-link>
+        <nuxt-link to="/contact" class="group">
+          <p
+            class="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 sm:gap-2 md:gap-2.5 hover:bg-white/10 hover:scale-105"
+            :class="
+              route.path === '/contact'
+                ? 'bg-gradient-to-r from-neutral-800 to-neutral-900 text-white font-semibold shadow-inner shadow-black/20'
+                : 'text-neutral-200 hover:text-white'
+            "
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="text-sm sm:text-base scale-110 transition-transform duration-300 group-hover:scale-110"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+              ></path>
+            </svg>
+            <span class="hidden sm:inline">Contact</span>
+          </p>
+        </nuxt-link>
       </div>
     </nav>
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .main {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+</style>

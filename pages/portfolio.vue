@@ -27,7 +27,7 @@ const projects = reactive([
 
 <template>
   <div
-    class="main w-full bg-[#1E1E1F] pt-10 pb-10 px-2 sm:px-12 xl:px-16 rounded-3xl border border-[#505050] relative"
+    class="main w-full bg-[#1E1E1F] pt-10 pb-10 px-2 sm:px-12 xl:px-16 rounded-3xl border border-[#505050] relative overflow-hidden transform  transition-all duration-300"
   >
     <StylingTab heading="Portfolio" class="absolute top-0 left-0 right-0" />
 
@@ -51,7 +51,7 @@ const projects = reactive([
       class="Card-container flex flex-wrap justify-center items-end gap-5 pt-5"
     >
       <div
-        class="Card-list card w-[20rem] p-2 bg-[#4b474765] shadow-xl shadow-[#000] z-40 rounded"
+        class="Card-list card w-[20rem] p-3 bg-gradient-to-br from-[#2B2B2C] to-[#1E1E1F] shadow-xl shadow-[#000] z-40 rounded-xl border border-[#505050]/30 hover:border-[#505050] transition-all duration-300 transform hover:-translate-y-1"
         v-for="(project, index) in projects"
         :key="index"
       >
@@ -66,10 +66,10 @@ const projects = reactive([
               <img
                 :src="project.image"
                 alt="project img"
-                class="border-2 hover:border-rose-500 group-hover:scale-90 duration-300 w-full h-auto"
+                class="rounded-lg border-2 border-transparent hover:border-rose-500 group-hover:scale-95 duration-300 w-full h-auto object-cover"
               />
               <div
-                class="Icon absolute flex justify-center items-center bg-black/50 w-full h-full top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                class="Icon absolute flex justify-center items-center bg-gradient-to-br from-black/80 to-black/50 w-full h-full top-0 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,10 +85,10 @@ const projects = reactive([
             </a>
           </div>
           <!-- Heading -->
-          <h1 class="heading text-stone-400 text-xl font-bold mt-3 mb-0.5">
+          <h1 class="heading text-stone-300 text-xl font-bold mt-4 mb-1 bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent">
             {{ project.title }}
           </h1>
-          <p class="text-sm text-[#cfcfcf]">{{ project.description }}</p>
+          <p class="text-sm text-[#cfcfcf]/90 font-light">{{ project.description }}</p>
         </div>
       </div>
     </div>

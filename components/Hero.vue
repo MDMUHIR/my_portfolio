@@ -1,28 +1,37 @@
 <script setup>
-const showDiv = ref(false);
+  const showDiv = ref(false);
+
+
 </script>
 
 <template>
-  <div class="main relative">
-    <!-- <Navbar
-        class="absolute -bottom-[5rem] -left-5 -right-5 z-50 hidden xl:block"
-      /> -->
+  <div
+    class="main flex items-center justify-center"
+  >
     <div
-      class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 opacity-75 blur z-10"
+      class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 opacity-60 blur-xl group-hover:opacity-75 transition-all duration-500 animate-gradient z-10"
     ></div>
+
     <div
-      class="bg-[#1E1E1F] z-30 relative pt-10 pb-5 px-5 rounded-3xl border border-[#505050] divide-y divide-[#505050]"
+      class="bg-[#1E1E1F] z-30 relative pt-10 pb-5 px-5 rounded-3xl border border-[#505050]/50 divide-y divide-[#505050]/50 backdrop-blur-sm group hover:border-[#505050] transition-colors duration-500"
     >
       <div
-        class="Top flex flex-row xl:flex-col items-center pb-6 sm:ml-7 xl:ml-0 z-20"
+        class="Top flex flex-row xl:flex-col items-center justify-center pb-6 sm:ml-7 xl:ml-0 z-20"
       >
         <!-- Images -->
-        <img
-          src="@/public/images/myimg.png"
-          alt=""
-          class="w-[6rem] md:w-[12rem] rounded-[20%] shadow-inner"
-        />
-        <div class="Title ml-3 mr-1 md:ml-6 xl:ml-0">
+        <div class="relative overflow-hidden rounded-[20%] group/image">
+          <img
+            src="@/public/images/myimg.png"
+            alt="Profile"
+            
+            class="w-[6rem] md:w-[12rem] transform transition-all duration-700 scale-100 group-hover/image:scale-110"
+          
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-rose-500/20 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"
+          ></div>
+        </div>
+        <div class="Title ml-3 mr-1 md:ml-6 xl:ml-0 text-center">
           <h1
             class="text-[22px] sm:text-2xl md:text-4xl xl:text-3xl font-medium text-white my-2"
           >
@@ -69,4 +78,21 @@ const showDiv = ref(false);
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s linear infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
